@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-OvernightPackage::OvernightPackage(double addFeeOz, const string& userName, const string& add, const string& c, const string& s, const string& ZIP, double& w, double& costOz): Package(userName, add, c, s, ZIP, w, costOz)
+OvernightPackage::OvernightPackage(const string& userName, const string& add, const string& c, const string& s, const string& ZIP, double& w, double& costOz, double addFeeOz): Package(userName, add, c, s, ZIP, w, costOz)
 {
 	setAdditionalFeeOz(addFeeOz);
 }
