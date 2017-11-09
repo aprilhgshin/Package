@@ -16,7 +16,7 @@ private:
 	double packageCost;
 
 public:
-	Package(const string&, const string&, const string&, const string&, const string&, double&, double&);
+	Package(const string&, const string&, const string&, const string&, const string&, double, double);
 	void setName(const string&);
 	void setAddress(const string&);
 	void setCity(const string&);
@@ -33,5 +33,5 @@ public:
 	double getWeight() const;
 	double getCostPerOunce() const;
 	double getPackageCost() const;
-	double calculateCost(double, double);
+	void calculateCost();
 };

@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-Package::Package(const string& userName, const string& add, const string& c, const string& s, const string& ZIP, double& w, double& costOz): name(userName), address(add), city(c), state(s), ZIPcode(ZIP)
+Package::Package(const string& userName, const string& add, const string& c, const string& s, const string& ZIP, double w, double costOz): name(userName), address(add), city(c), state(s), ZIPcode(ZIP)
 {
 	setWeight(w);
 	setCostPerOunce(costOz);
@@ -86,7 +86,7 @@ double Package::getPackageCost() const
 {
 	return packageCost;
 }
-double Package::calculateCost(double, double)
+void Package::calculateCost()
 {
 	setPackageCost(getWeight()*getCostPerOunce());
 }
