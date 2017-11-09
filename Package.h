@@ -16,6 +16,7 @@ private:
 	double packageCost;
 
 public:
+	Package();
 	Package(const string&, const string&, const string&, const string&, const string&, double, double);
 	void setName(const string&);
 	void setAddress(const string&);

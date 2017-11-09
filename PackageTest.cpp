@@ -18,7 +18,8 @@ int main()
 		<< "Address: " << night.getAddress() << endl
 		<< "City: " << night.getCity() << endl
 		<< "State: " << night.getState() << endl
-		<< "ZIP Code: " << night.getZIPcode() << endl;
+		<< "ZIP Code: " << night.getZIPcode() << endl
+		<< "Over night package cost: " << night.calculateCost() << endl;
 
 	TwoDayPackage twoDay(4.0, name, address, city, state, ZIPcode, 10.0, 7.0);
 	cout << "User information obtained by get functions: " << endl

@@ -1,5 +1,6 @@
 #include "Package.h"
 #include <string>
+#include <iostream>
 using namespace std;
 
 Package::Package(const string& userName, const string& add, const string& c, const string& s, const string& ZIP, double w, double costOz): name(userName), address(add), city(c), state(s), ZIPcode(ZIP)
@@ -82,11 +83,19 @@ double Package::getCostPerOunce() const
 {
 	return costPerOunce;
 }
+
+//this is where the problem is at: passing the value from calculateCost to getPackageCost()
 double Package::getPackageCost() const
 {
+	cout << "weightL " << getWeight() << endl;		//testing
+	cout << "get : " << getCostPerOunce() << endl;		//testing
+	cout << "should work but : " << (getWeight() * getCostPerOunce()) << endl;  //testing
+
 	return packageCost;
 }
 void Package::calculateCost()
 {
-	setPackageCost(getWeight()*getCostPerOunce());
+	double pcost;
+	pcost = (getWeight() * getCostPerOunce());
+	setPackageCost(pcost);
 }

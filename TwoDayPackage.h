@@ -11,6 +11,6 @@ private:
 public:
 	TwoDayPackage(double, const string&, const string&, const string&, const string&, const string&, double, double);
 	void setFlatFee(double);
-	double getFlatFee();
+	double getFlatFee() const;
 	double calculateCost();
 };

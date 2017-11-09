@@ -19,5 +19,5 @@ double OvernightPackage::getAdditionalFeeOz()
 
 double OvernightPackage::calculateCost()
 {
-	return (getAdditionalFeeOz() + getCostPerOunce())*getWeight();
+	return ((getAdditionalFeeOz() + getCostPerOunce())*getWeight());
 }
