@@ -13,20 +13,22 @@ private:
 	string ZIPcode;
 	double weight;
 	double costPerOunce;
+
 public:
-	void setName(string);
-	void setAddress(string);
-	void setCity(string);
-	void setState(string);
-	void setZIPcode(string);
+	Package(const string&, const string&, const string&, const string&, const string&, double&, double&);
+	void setName(const string&);
+	void setAddress(const string&);
+	void setCity(const string&);
+	void setState(const string&);
+	void setZIPcode(const string&);
 	void setWeight(double);
 	void setCostPerOunce(double);
-	string getName();
-	string getAddress();
-	string getCity();
-	string getState();
-	string getZIPcode();
-	double getWeight();
-	double getCostPerOunce();
+	string getName() const;
+	string getAddress() const;
+	string getCity() const;
+	string getState() const;
+	string getZIPcode() const;
+	double getWeight() const;
+	double getCostPerOunce() const;
 	double calculateCost(double, double);
 };

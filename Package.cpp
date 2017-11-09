@@ -2,63 +2,68 @@
 #include <string>
 using namespace std;
 
-void Package::setName(string)
+Package::Package(const string& userName, const string& add, const string& c, const string& s, const string& ZIP, double& w, double& costOz): name(userName), address(add), city(c), state(s), ZIPcode(ZIP)
 {
-
+	setWeight(w);
+	setCostPerOunce(costOz);
 }
-void Package::setAddress(string)
+void Package::setName(const string& userName)
 {
-
+	name = userName;
 }
-void Package::setCity(string)
+void Package::setAddress(const string& add)
 {
-
+	address = add;
 }
-void Package::setState(string)
+void Package::setCity(const string& c)
 {
-
+	city = c;
 }
-void Package::setZIPcode(string)
+void Package::setState(const string& s)
 {
-
+	state = s;
 }
-void Package::setWeight(double)
+void Package::setZIPcode(const string& ZIP)
 {
-
+	ZIPcode = ZIP;
 }
-void Package::setCostPerOunce(double)
+void Package::setWeight(double w)
 {
-
+	weight = w;
 }
-string Package::getName()
+void Package::setCostPerOunce(double costOz)
 {
-
+	costPerOunce = costOz;
 }
-string Package::getAddress()
+string Package::getName() const
 {
-
+	return name;
 }
-string Package::getCity()
+string Package::getAddress() const
 {
-
+	return address;
 }
-string Package::getState()
+string Package::getCity() const
 {
-
+	return city;
 }
-string Package::getZIPcode()
+string Package::getState() const
 {
-
+	return state;
 }
-double Package::getWeight()
+string Package::getZIPcode() const
 {
-
+	return ZIPcode;
 }
-double Package::getCostPerOunce()
+double Package::getWeight() const
 {
-
+	return weight;
+}
+double Package::getCostPerOunce() const
+{
+	return costPerOunce;
 }
 double Package::calculateCost(double, double)
 {
-
+	return getWeight()*getCostPerOunce();
 }
