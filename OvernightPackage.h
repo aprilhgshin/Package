@@ -9,8 +9,8 @@ class OvernightPackage : public Package
 private:
 	double additionalFeeOz;
 public:
-	OvernightPackage();
-	void setAdditionalFeeOz();
+	OvernightPackage(double, const string&, const string&, const string&, const string&, const string&, double&, double&);
+	void setAdditionalFeeOz(double);
 	double getAdditionalFeeOz();
 	double calculateCost(double);
 };

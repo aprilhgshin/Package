@@ -29,12 +29,31 @@ void Package::setZIPcode(const string& ZIP)
 }
 void Package::setWeight(double w)
 {
-	weight = w;
+	if (w >= 0)
+	{
+		weight = w;
+	}
+	else
+	{ 
+	}
 }
+
 void Package::setCostPerOunce(double costOz)
 {
-	costPerOunce = costOz;
+	if (costOz >= 0)
+	{
+		costPerOunce = costOz;
+	}
+	else
+	{
+	}
 }
+
+void Package::setPackageCost(double pcost)
+{
+	packageCost = pcost;
+}
+
 string Package::getName() const
 {
 	return name;
@@ -63,7 +82,11 @@ double Package::getCostPerOunce() const
 {
 	return costPerOunce;
 }
+double Package::getPackageCost() const
+{
+	return packageCost;
+}
 double Package::calculateCost(double, double)
 {
-	return getWeight()*getCostPerOunce();
+	setPackageCost(getWeight()*getCostPerOunce());
 }
